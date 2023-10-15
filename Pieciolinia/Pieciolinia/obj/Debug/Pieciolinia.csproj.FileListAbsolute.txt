@@ -1,0 +1,11 @@
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\bin\Debug\Pieciolinia.exe.config
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\bin\Debug\Pieciolinia.exe
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\bin\Debug\Pieciolinia.pdb
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\obj\Debug\Pieciolinia.csproj.AssemblyReference.cache
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\obj\Debug\Pieciolinia.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\obj\Debug\Pieciolinia.Form1.resources
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\obj\Debug\Pieciolinia.Properties.Resources.resources
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\obj\Debug\Pieciolinia.csproj.GenerateResource.cache
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\obj\Debug\Pieciolinia.csproj.CoreCompileInputs.cache
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\obj\Debug\Pieciolinia.exe
+C:\Users\Kuba\Pieciolinia\Pieciolinia\Pieciolinia\obj\Debug\Pieciolinia.pdb
