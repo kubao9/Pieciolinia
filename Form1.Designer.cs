@@ -41,10 +41,10 @@
             this.gis = new System.Windows.Forms.Button();
             this.b = new System.Windows.Forms.Button();
             this.options = new System.Windows.Forms.GroupBox();
-            this.playButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.loadButton = new System.Windows.Forms.Button();
             this.recordButton = new System.Windows.Forms.Button();
+            this.loadButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.playButton = new System.Windows.Forms.Button();
             this.options.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,7 +140,7 @@
             this.cis.Name = "cis";
             this.cis.Size = new System.Drawing.Size(59, 312);
             this.cis.TabIndex = 7;
-            this.cis.Text = "CIS";
+            this.cis.Text = "CIS DES";
             this.cis.UseVisualStyleBackColor = false;
             // 
             // dis
@@ -151,7 +151,7 @@
             this.dis.Name = "dis";
             this.dis.Size = new System.Drawing.Size(59, 312);
             this.dis.TabIndex = 8;
-            this.dis.Text = "DIS";
+            this.dis.Text = "DIS  ES";
             this.dis.UseVisualStyleBackColor = false;
             // 
             // fis
@@ -162,7 +162,7 @@
             this.fis.Name = "fis";
             this.fis.Size = new System.Drawing.Size(59, 312);
             this.fis.TabIndex = 9;
-            this.fis.Text = "FIS";
+            this.fis.Text = "FIS GES";
             this.fis.UseVisualStyleBackColor = false;
             // 
             // gis
@@ -173,7 +173,7 @@
             this.gis.Name = "gis";
             this.gis.Size = new System.Drawing.Size(59, 312);
             this.gis.TabIndex = 10;
-            this.gis.Text = "GIS";
+            this.gis.Text = "GIS  AS";
             this.gis.UseVisualStyleBackColor = false;
             // 
             // b
@@ -184,7 +184,7 @@
             this.b.Name = "b";
             this.b.Size = new System.Drawing.Size(59, 312);
             this.b.TabIndex = 11;
-            this.b.Text = "B";
+            this.b.Text = " AIS   B";
             this.b.UseVisualStyleBackColor = false;
             // 
             // options
@@ -200,23 +200,14 @@
             this.options.TabStop = false;
             this.options.Text = "OPCJE";
             // 
-            // playButton
+            // recordButton
             // 
-            this.playButton.Location = new System.Drawing.Point(6, 26);
-            this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(132, 85);
-            this.playButton.TabIndex = 0;
-            this.playButton.Text = "GRAJ";
-            this.playButton.UseVisualStyleBackColor = true;
-            // 
-            // saveButton
-            // 
-            this.saveButton.Location = new System.Drawing.Point(6, 299);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(132, 85);
-            this.saveButton.TabIndex = 1;
-            this.saveButton.Text = "ZAPISZ";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.recordButton.Location = new System.Drawing.Point(6, 117);
+            this.recordButton.Name = "recordButton";
+            this.recordButton.Size = new System.Drawing.Size(132, 85);
+            this.recordButton.TabIndex = 3;
+            this.recordButton.Text = "REJESTRUJ";
+            this.recordButton.UseVisualStyleBackColor = true;
             // 
             // loadButton
             // 
@@ -227,14 +218,23 @@
             this.loadButton.Text = "WCZYTAJ";
             this.loadButton.UseVisualStyleBackColor = true;
             // 
-            // recordButton
+            // saveButton
             // 
-            this.recordButton.Location = new System.Drawing.Point(6, 117);
-            this.recordButton.Name = "recordButton";
-            this.recordButton.Size = new System.Drawing.Size(132, 85);
-            this.recordButton.TabIndex = 3;
-            this.recordButton.Text = "REJESTRUJ";
-            this.recordButton.UseVisualStyleBackColor = true;
+            this.saveButton.Location = new System.Drawing.Point(6, 299);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(132, 85);
+            this.saveButton.TabIndex = 1;
+            this.saveButton.Text = "ZAPISZ";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
+            // playButton
+            // 
+            this.playButton.Location = new System.Drawing.Point(6, 26);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(132, 85);
+            this.playButton.TabIndex = 0;
+            this.playButton.Text = "GRAJ";
+            this.playButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

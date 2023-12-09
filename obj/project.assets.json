@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia\\Pieciolinia.csproj",
+      "projectUniqueName": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj",
       "projectName": "Pieciolinia",
-      "projectPath": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia\\Pieciolinia.csproj",
+      "projectPath": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj",
       "packagesPath": "C:\\Users\\Kuba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia\\obj\\",
+      "outputPath": "C:\\Users\\Kuba\\Pieciolinia\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
