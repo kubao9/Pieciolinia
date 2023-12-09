@@ -32,3 +32,19 @@ C:\Users\Kuba\Pieciolinia\obj\Debug\net6.0-windows\refint\Pieciolinia.dll
 C:\Users\Kuba\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.pdb
 C:\Users\Kuba\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.genruntimeconfig.cache
 C:\Users\Kuba\Pieciolinia\obj\Debug\net6.0-windows\ref\Pieciolinia.dll
+D:\Studia\semestr5\inzynieria oprogramowania\piano\bin\Debug\net6.0-windows\Pieciolinia.exe
+D:\Studia\semestr5\inzynieria oprogramowania\piano\bin\Debug\net6.0-windows\Pieciolinia.deps.json
+D:\Studia\semestr5\inzynieria oprogramowania\piano\bin\Debug\net6.0-windows\Pieciolinia.runtimeconfig.json
+D:\Studia\semestr5\inzynieria oprogramowania\piano\bin\Debug\net6.0-windows\Pieciolinia.dll
+D:\Studia\semestr5\inzynieria oprogramowania\piano\bin\Debug\net6.0-windows\Pieciolinia.pdb
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\Pieciolinia.Form1.resources
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\Pieciolinia.csproj.GenerateResource.cache
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\Pieciolinia.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\Pieciolinia.AssemblyInfoInputs.cache
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\Pieciolinia.AssemblyInfo.cs
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\Pieciolinia.csproj.CoreCompileInputs.cache
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\Pieciolinia.dll
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\refint\Pieciolinia.dll
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\Pieciolinia.pdb
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\Pieciolinia.genruntimeconfig.cache
+D:\Studia\semestr5\inzynieria oprogramowania\piano\obj\Debug\net6.0-windows\ref\Pieciolinia.dll
