@@ -1,0 +1,17 @@
+C:\Users\Kuba\Pieciolinia\Pieciolinia\bin\Debug\net6.0-windows\Pieciolinia.exe
+C:\Users\Kuba\Pieciolinia\Pieciolinia\bin\Debug\net6.0-windows\Pieciolinia.deps.json
+C:\Users\Kuba\Pieciolinia\Pieciolinia\bin\Debug\net6.0-windows\Pieciolinia.runtimeconfig.json
+C:\Users\Kuba\Pieciolinia\Pieciolinia\bin\Debug\net6.0-windows\Pieciolinia.dll
+C:\Users\Kuba\Pieciolinia\Pieciolinia\bin\Debug\net6.0-windows\Pieciolinia.pdb
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.csproj.AssemblyReference.cache
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.Form1.resources
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.csproj.GenerateResource.cache
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.AssemblyInfoInputs.cache
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.AssemblyInfo.cs
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.csproj.CoreCompileInputs.cache
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.dll
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\refint\Pieciolinia.dll
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.pdb
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\Pieciolinia.genruntimeconfig.cache
+C:\Users\Kuba\Pieciolinia\Pieciolinia\obj\Debug\net6.0-windows\ref\Pieciolinia.dll
