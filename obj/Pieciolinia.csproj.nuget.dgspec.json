@@ -1,28 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Studia\\semestr5\\inzynieria oprogramowania\\piano\\Pieciolinia.csproj": {}
+    "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj": {}
   },
   "projects": {
-    "D:\\Studia\\semestr5\\inzynieria oprogramowania\\piano\\Pieciolinia.csproj": {
+    "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\semestr5\\inzynieria oprogramowania\\piano\\Pieciolinia.csproj",
+        "projectUniqueName": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj",
         "projectName": "Pieciolinia",
-        "projectPath": "D:\\Studia\\semestr5\\inzynieria oprogramowania\\piano\\Pieciolinia.csproj",
-        "packagesPath": "C:\\Users\\Komputer\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia\\semestr5\\inzynieria oprogramowania\\piano\\obj\\",
+        "projectPath": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj",
+        "packagesPath": "C:\\Users\\Kuba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kuba\\Pieciolinia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Komputer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kuba\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -49,8 +49,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -62,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
