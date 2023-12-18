@@ -2,6 +2,10 @@ namespace Pieciolinia
 {
     public partial class Form1 : Form
     {
+        private DateTime lastNoteStartTime;
+        private bool recordState = false;
+        private string notes = String.Empty;
+
         public Form1()
         {
             InitializeComponent();
@@ -13,92 +17,102 @@ namespace Pieciolinia
             player.Play();
         }
 
-        private void c_Click(object sender, EventArgs e)
+        private void RecordNote(string note)
         {
-            notes += (recordState) ? "c\n" : String.Empty;
+            if (recordState)
+            {
+                var duration = DateTime.Now - lastNoteStartTime;
+                //notes += $"{note} {duration.TotalMilliseconds}ms\n";
+                notes += $"{note} {duration.TotalMilliseconds:F0}ms\n";
+            }
+
+            lastNoteStartTime = DateTime.Now;
+        }
+
+        private void c_MouseDown(object sender, EventArgs e)
+        {
+            RecordNote("c");
             Play(@"NotesAudio/c1.wav");
         }
 
-        private void cis_Click(object sender, EventArgs e)
+        private void cis_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "cis\n" : String.Empty;
+            RecordNote("cis");
             Play(@"NotesAudio/csharp1.wav");
         }
 
-        private void d_Click(object sender, EventArgs e)
+        private void d_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "d\n" : String.Empty;
+            RecordNote("d");
             Play(@"NotesAudio/d1.wav");
         }
 
-        private void dis_Click(object sender, EventArgs e)
+        private void dis_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "dis\n" : String.Empty;
+            RecordNote("dis");
             Play(@"NotesAudio/dsharp1.wav");
         }
 
-        private void e_Click(object sender, EventArgs e)
+        private void e_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "e\n" : String.Empty;
+            RecordNote("e");
             Play(@"NotesAudio/e1.wav");
         }
 
-        private void f_Click(object sender, EventArgs e)
+        private void f_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "f\n" : String.Empty;
+            RecordNote("f");
             Play(@"NotesAudio/f1.wav");
         }
 
-        private void fis_Click(object sender, EventArgs e)
+        private void fis_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "fis\n" : String.Empty;
+            RecordNote("fis");
             Play(@"NotesAudio/fsharp1.wav");
         }
 
-        private void g_Click(object sender, EventArgs e)
+        private void g_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "g\n" : String.Empty;
+            RecordNote("g");
             Play(@"NotesAudio/g1.wav");
         }
 
-        private void gis_Click(object sender, EventArgs e)
+        private void gis_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "gis\n" : String.Empty;
+            RecordNote("gis");
             Play(@"NotesAudio/gsharp1.wav");
         }
 
-        private void a_Click(object sender, EventArgs e)
+        private void a_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "a\n" : String.Empty;
+            RecordNote("a");
             Play(@"NotesAudio/a1.wav");
         }
 
-        private void b_Click(object sender, EventArgs e)
+        private void b_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "b\n" : String.Empty;
+            RecordNote("b");
             Play(@"NotesAudio/asharp1.wav");
         }
 
-        private void h_Click(object sender, EventArgs e)
+        private void h_MouseDown(object sender, EventArgs e)
         {
-            notes += (recordState) ? "h\n" : String.Empty;
+            RecordNote("h");
             Play(@"NotesAudio/b1.wav");
         }
-
-        private bool recordState = false;
-        private string notes = String.Empty;
 
         private void recordButton_Click(object sender, EventArgs e)
         {
             if (recordState)
             {
                 var loc = "temp.txt";
-
                 File.WriteAllText(loc, notes);
-
-                //The text input is done
-                MessageBox.Show("Zarejestrowano melodie.");
+                MessageBox.Show("Zarejestrowano melodiê.");
                 notes = String.Empty;
+            }
+            else
+            {
+                lastNoteStartTime = DateTime.Now; // Rozpoczêcie œledzenia czasu na pocz¹tku nagrywania
             }
 
             recordState = !recordState;

@@ -59,7 +59,9 @@
             this.c.Text = "C";
             this.c.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.c.UseVisualStyleBackColor = false;
-            this.c.Click += new System.EventHandler(this.c_Click);
+            //this.c.Click += new System.EventHandler(this.c_Click);
+            this.c.MouseDown += new System.Windows.Forms.MouseEventHandler(this.c_MouseDown);
+
             // 
             // d
             // 
@@ -72,7 +74,9 @@
             this.d.Text = "D";
             this.d.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.d.UseVisualStyleBackColor = false;
-            this.d.Click += new System.EventHandler(this.d_Click);
+            //this.d.Click += new System.EventHandler(this.d_Click);
+            this.d.MouseDown += new System.Windows.Forms.MouseEventHandler(this.d_MouseDown);
+
             // 
             // e
             // 
@@ -85,7 +89,9 @@
             this.e.Text = "E";
             this.e.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.e.UseVisualStyleBackColor = false;
-            this.e.Click += new System.EventHandler(this.e_Click);
+            //this.e.Click += new System.EventHandler(this.e_Click);
+            this.e.MouseDown += new System.Windows.Forms.MouseEventHandler(this.e_MouseDown);
+
             // 
             // f
             // 
@@ -98,7 +104,9 @@
             this.f.Text = "F";
             this.f.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.f.UseVisualStyleBackColor = false;
-            this.f.Click += new System.EventHandler(this.f_Click);
+            //this.f.Click += new System.EventHandler(this.f_Click);
+            this.f.MouseDown += new System.Windows.Forms.MouseEventHandler(this.f_MouseDown);
+
             // 
             // g
             // 
@@ -111,7 +119,9 @@
             this.g.Text = "G";
             this.g.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.g.UseVisualStyleBackColor = false;
-            this.g.Click += new System.EventHandler(this.g_Click);
+            //this.g.Click += new System.EventHandler(this.g_Click);
+            this.g.MouseDown += new System.Windows.Forms.MouseEventHandler(this.g_MouseDown);
+
             // 
             // a
             // 
@@ -124,7 +134,9 @@
             this.a.Text = "A";
             this.a.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.a.UseVisualStyleBackColor = false;
-            this.a.Click += new System.EventHandler(this.a_Click);
+            //this.a.Click += new System.EventHandler(this.a_Click);
+            this.a.MouseDown += new System.Windows.Forms.MouseEventHandler(this.a_MouseDown);
+
             // 
             // h
             // 
@@ -137,7 +149,9 @@
             this.h.Text = "H";
             this.h.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.h.UseVisualStyleBackColor = false;
-            this.h.Click += new System.EventHandler(this.h_Click);
+            //this.h.Click += new System.EventHandler(this.h_Click);
+            this.h.MouseDown += new System.Windows.Forms.MouseEventHandler(this.h_MouseDown);
+
             // 
             // cis
             // 
@@ -149,7 +163,9 @@
             this.cis.TabIndex = 7;
             this.cis.Text = "CIS DES";
             this.cis.UseVisualStyleBackColor = false;
-            this.cis.Click += new System.EventHandler(this.cis_Click);
+            //this.cis.Click += new System.EventHandler(this.cis_Click);
+            this.cis.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cis_MouseDown);
+
             // 
             // dis
             // 
@@ -161,7 +177,9 @@
             this.dis.TabIndex = 8;
             this.dis.Text = "DIS  ES";
             this.dis.UseVisualStyleBackColor = false;
-            this.dis.Click += new System.EventHandler(this.dis_Click);
+            //this.dis.Click += new System.EventHandler(this.dis_Click);
+            this.dis.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dis_MouseDown);
+
             // 
             // fis
             // 
@@ -173,7 +191,9 @@
             this.fis.TabIndex = 9;
             this.fis.Text = "FIS GES";
             this.fis.UseVisualStyleBackColor = false;
-            this.fis.Click += new System.EventHandler(this.fis_Click);
+            //this.fis.Click += new System.EventHandler(this.fis_Click);
+            this.fis.MouseDown += new System.Windows.Forms.MouseEventHandler(this.fis_MouseDown);
+
             // 
             // gis
             // 
@@ -185,7 +205,9 @@
             this.gis.TabIndex = 10;
             this.gis.Text = "GIS  AS";
             this.gis.UseVisualStyleBackColor = false;
-            this.gis.Click += new System.EventHandler(this.gis_Click);
+            //this.gis.Click += new System.EventHandler(this.gis_Click);
+            this.gis.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gis_MouseDown);
+
             // 
             // b
             // 
@@ -197,7 +219,9 @@
             this.b.TabIndex = 11;
             this.b.Text = " AIS   B";
             this.b.UseVisualStyleBackColor = false;
-            this.b.Click += new System.EventHandler(this.b_Click);
+            //this.b.Click += new System.EventHandler(this.b_Click);
+            this.b.MouseDown += new System.Windows.Forms.MouseEventHandler(this.b_MouseDown);
+
             // 
             // options
             // 
