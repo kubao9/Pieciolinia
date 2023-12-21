@@ -3,85 +3,72 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Pieciolinia"
         xmlns:vm="clr-namespace:Pieciolinia.ViewModel"
         mc:Ignorable="d"
-                Title="Pieciolinia" Height="500" Width="800">
+        Title="Pieciolinia" Height="500" Width="800">
+
+
 
     <Window.DataContext>
-        <vm:MainViewModel x:Name="mainViewModel"/>
+        <vm:MainViewModel />
     </Window.DataContext>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <DockPanel>
+        <!-- Menu główne -->
+        <Menu DockPanel.Dock="Top" Background="#bccefb " Foreground="Black">
+            <MenuItem Header="File">
+                <MenuItem x:Name="Open1" Header="Open" Click="Open1_Click"/>
+                <MenuItem x:Name="Save1" Header="Save" Click="Save1_Click"/>
+            </MenuItem>
+        </Menu>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="PLAY" Width="100" Margin="5"/>
-            <Button Content="SAVE" Width="100" Margin="5"/>
-            <Button Content="LOAD" Width="100" Margin="5"/>
+        <!-- Pasek narzędzi -->
+        <ToolBar ToolBarTray.IsLocked="True" DockPanel.Dock="Top" Background="#bccefb ">
+            <Button Content="Add Note" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White"/>
+            <Button Content="Play" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="PlayButton_Click"/>
+        </ToolBar>
+
+        <!-- Formularz do dodawania nut -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5" Background="#EEEEEE">
+            <ComboBox x:Name="PitchComboBox" Width="70" Margin="5"
+                      ItemsSource="{Binding Pitches}" SelectedIndex="0"/>
+            <ComboBox x:Name="DurationComboBox" Width="70" Margin="5"
+                      SelectedIndex="0">
+                <ComboBoxItem Content="Cała" Tag="1"/>
+                <ComboBoxItem Content="Pół" Tag="2"/>
+                <ComboBoxItem Content="Ćwierć" Tag="4"/>
+                <ComboBoxItem Content="Ósemka" Tag="8"/>
+                <ComboBoxItem Content="Szesnastka" Tag="16"/>
+            </ComboBox>
+            <ComboBox x:Name="OctaveComboBox" Width="70" Margin="5" SelectedIndex="0">
+                <ComboBoxItem Content="1" Tag="1"/>
+                <ComboBoxItem Content="2" Tag="2"/>
+                <ComboBoxItem Content="3" Tag="3"/>
+            </ComboBox>
+            <CheckBox x:Name="IsSharpCheckBox" Content="Sharp" Margin="5" />
+            <Button Content="Add Note" Margin="5" Click="AddNoteButton_Click"/>
         </StackPanel>
 
-        <Grid Grid.Row="1" Name="GridNotes">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+        <!-- Pięciolinia -->
+        <Canvas Height="150" Background="White">
+            <Line X1="0" Y1="20" X2="800" Y2="20" Stroke="Black" StrokeThickness="1" />
+            <Line X1="0" Y1="40" X2="800" Y2="40" Stroke="Black" StrokeThickness="1" />
+            <Line X1="0" Y1="60" X2="800" Y2="60" Stroke="Black" StrokeThickness="1" />
+            <Line X1="0" Y1="80" X2="800" Y2="80" Stroke="Black" StrokeThickness="1" />
+            <Line X1="0" Y1="100" X2="800" Y2="100" Stroke="Black" StrokeThickness="1" />
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-        </Grid>
-    </Grid>
+            <!-- Wyświetlanie nut -->
+            <ItemsControl ItemsSource="{Binding Notes}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Canvas>
+                            <TextBlock Text="{Binding Pitch}"
+                                   Canvas.Left="{Binding XPosition}" 
+                                   Canvas.Top="{Binding YPosition}" />
+                        </Canvas>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Canvas>
+    </DockPanel>
 </Window>
