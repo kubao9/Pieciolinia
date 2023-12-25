@@ -3,17 +3,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Threading;
-using System.Windows.Input;
-using NAudio.Wave;
-using NAudio.Midi;
-using NAudio.Wave.SampleProviders;
 using System;
 using System.Media;
 using System.Threading.Tasks;
 using System.IO;
 using System.Linq;
-using System.Windows;
 
 namespace Pieciolinia.ViewModel
 {
@@ -34,13 +28,15 @@ namespace Pieciolinia.ViewModel
             //PlayMusicCommand = new RelayCommand(PlayMusic);
         }
 
-        public void AddNote(string pitch, int duration, int octave, bool isSharp)
+        public void AddNote(string pitch, int duration, int octave, bool isSharp, string noteIcon)
         {
-            var note = new Note(pitch, duration, octave, isSharp)
+            var note = new Note(pitch, duration, octave, isSharp, noteIcon)
             {
                 XPosition = CalculateXPosition(),
                 YPosition = CalculateYPosition(pitch, octave)
             };
+
+            noteIcon = GetNoteIconFromDuration(duration);
 
             Notes.Add(note);
 
@@ -48,9 +44,30 @@ namespace Pieciolinia.ViewModel
             Debug.WriteLine($"{note.XPosition} : {note.YPosition}");*/
             foreach (var _note in Notes)
             {
-                Debug.WriteLine($"Pitch: {_note.Pitch}, Duration: {_note.Duration}, Octave: {_note.Octave}, IsSharp: {_note.IsSharp}, X: {_note.XPosition}, Y: {_note.YPosition}");
+                Debug.WriteLine($"Pitch: {_note.Pitch}, Duration: {_note.Duration}, Octave: {_note.Octave}, IsSharp: {_note.IsSharp}, X: {_note.XPosition}, Y: {_note.YPosition}, NoteIcon: {noteIcon}");
             }
 
+        }
+
+        private string GetNoteIconFromDuration(int duration)
+        {
+            int wholeNoteDurationMs = 2000;
+
+            switch (wholeNoteDurationMs / duration)
+            {
+                case 2000:
+                    return "𝅝";
+                case 1000:
+                    return "𝅗𝅥";
+                case 500:
+                    return "𝅘𝅥";
+                case 250:
+                    return "𝅘𝅥𝅮";
+                case 125:
+                    return "𝅘𝅥𝅯";
+                default:
+                    return "𝅘𝅥𝅮";
+            }
         }
 
         private int CalculateXPosition()
@@ -101,7 +118,7 @@ namespace Pieciolinia.ViewModel
 
             // Obliczanie pozycji Y w oparciu o wysokość dźwięku i oktawe
             int positionY = baseLine - (pitchPosition + (octave - 4) * 7) * lineSpacing;
-            positionY -= 150;
+            positionY -= 190;
             return positionY;
         }
 

@@ -1,6 +1,5 @@
 ﻿using Microsoft.Win32;
 using Pieciolinia.ViewModel;
-using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -29,11 +28,34 @@ namespace Pieciolinia
             int octave = int.Parse(selectedOctaveItem.Tag.ToString());
             bool isSharp = IsSharpCheckBox.IsChecked ?? false;
 
+            string noteIcon = GetNoteIconFromDuration(duration);
+
             // Dostęp do MainViewModel i wywołanie funkcji AddNote
             var mainViewModel = DataContext as MainViewModel;
 
             // Dodajemy notę przy użyciu MainViewModel
-            mainViewModel?.AddNote(pitch, duration, octave, isSharp);
+            mainViewModel?.AddNote(pitch, duration, octave, isSharp, noteIcon);
+        }
+
+        private string GetNoteIconFromDuration(int duration)
+        {
+            int wholeNoteDurationMs = 2000;
+
+            switch (wholeNoteDurationMs / duration)
+            {
+                case 2000:
+                    return "𝅝";
+                case 1000:
+                    return "𝅗𝅥";
+                case 500:
+                    return "𝅘𝅥";
+                case 250:
+                    return "𝅘𝅥𝅮";
+                case 125:
+                    return "𝅘𝅥𝅯";
+                default:
+                    return "𝅘𝅥𝅮";
+            }
         }
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)

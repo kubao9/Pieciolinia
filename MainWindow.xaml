@@ -62,7 +62,8 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Canvas>
-                            <TextBlock Text="{Binding Pitch}"
+                            <TextBlock Text="{Binding NoteIcon}"
+                                       FontSize="50px"
                                    Canvas.Left="{Binding XPosition}" 
                                    Canvas.Top="{Binding YPosition}" />
                         </Canvas>
