@@ -26,8 +26,13 @@
         <ToolBar ToolBarTray.IsLocked="True" DockPanel.Dock="Top" Background="#bccefb ">
             <Button Content="Add Note" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White"/>
             <Button Content="Play" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="PlayButton_Click"/>
+            <Button Content="Edit" Padding="5" Margin="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="EditButton_Click" Width="83"  Visibility="{Binding VisMain}"/>
+            <Button Content="Save" Padding="5" Margin="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Width="83" Visibility="{Binding VisEdit}" Click="Button_Click"/>
         </ToolBar>
-
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5" Background="#EEEEEE" Visibility="{Binding VisEdit}">
+            <TextBlock Text="Choose note:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ComboBox x:Name="NotesComboBox" Width="70" Margin="5" ItemsSource="{Binding Notes}"/>
+        </StackPanel>
         <!-- Formularz do dodawania nut -->
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5" Background="#EEEEEE">
             <ComboBox x:Name="PitchComboBox" Width="70" Margin="5"
@@ -46,7 +51,8 @@
                 <ComboBoxItem Content="3" Tag="3"/>
             </ComboBox>
             <CheckBox x:Name="IsSharpCheckBox" Content="Sharp" Margin="5" />
-            <Button Content="Add Note" Margin="5" Click="AddNoteButton_Click"/>
+            <Button Content="Add Note" Margin="5" Click="AddNoteButton_Click" Visibility="{Binding VisMain}"/>
+            <Button Content="Save" Margin="5" Visibility="{Binding VisEdit}"/>
         </StackPanel>
 
         <!-- Pięciolinia -->

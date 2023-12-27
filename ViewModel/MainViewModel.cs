@@ -8,6 +8,7 @@ using System.Media;
 using System.Threading.Tasks;
 using System.IO;
 using System.Linq;
+using System.Windows;
 
 namespace Pieciolinia.ViewModel
 {
@@ -21,13 +22,34 @@ namespace Pieciolinia.ViewModel
         //public ICommand PlayMusicCommand { get; }
 
         public MainViewModel()
-        {
+        {   
+            VisEdit = Visibility.Collapsed;
+            VisMain = Visibility.Visible;
             Notes = new ObservableCollection<Note>();
             Pitches = new List<string> { "C", "D", "E", "F", "G", "A", "B" };
 
             //PlayMusicCommand = new RelayCommand(PlayMusic);
         }
-
+        private Visibility visMain;
+        public Visibility VisMain
+        {
+            get { return visMain; }
+            private set
+            {
+                visMain = value;
+                OnPropertyChanged(nameof(VisMain));
+            }
+        }
+        private Visibility visEdit;
+        public Visibility VisEdit
+        {
+            get { return visEdit; }
+            private set
+            {
+                visEdit = value;
+                OnPropertyChanged(nameof(VisEdit));
+            }
+        }
         public void AddNote(string pitch, int duration, int octave, bool isSharp, string noteIcon)
         {
             var note = new Note(pitch, duration, octave, isSharp, noteIcon)
@@ -211,9 +233,21 @@ namespace Pieciolinia.ViewModel
                 Notes.Add(note);
             }
         }
+        public void EditButton_Click()
+        {
+            VisMain = Visibility.Collapsed;
+            VisEdit = Visibility.Visible;
+
+        }
+        public void SaveButton_Click()
+        {
+            VisEdit = Visibility.Collapsed;
+            VisMain = Visibility.Visible;
+        }
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
     }
 }

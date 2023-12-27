@@ -85,5 +85,17 @@ namespace Pieciolinia
                 (DataContext as MainViewModel)?.SaveNotesToFile(saveFileDialog.FileName);
             }
         }
+
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainViewModel = DataContext as MainViewModel;
+            mainViewModel?.EditButton_Click();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var mainViewModel = DataContext as MainViewModel;
+            mainViewModel?.SaveButton_Click();
+        }
     }
 }
