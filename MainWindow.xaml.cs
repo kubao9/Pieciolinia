@@ -97,5 +97,10 @@ namespace Pieciolinia
             var mainViewModel = DataContext as MainViewModel;
             mainViewModel?.SaveButton_Click();
         }
+        private void NotesComboBoxEdit_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            var mainViewModel = DataContext as MainViewModel;
+            mainViewModel?.NotesComboBoxEdit_SelectionChanged();
+
+        }
     }
 }

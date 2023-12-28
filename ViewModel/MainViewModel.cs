@@ -18,7 +18,21 @@ namespace Pieciolinia.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<Note> Notes { get; private set; }
         public List<string> Pitches { get; private set; }
-
+        public int SelectedNote { get; set; }
+        public int SelectedDuration,SelectedOctave,SelectedIsSharp;
+        private int selectedPitch;
+        public int SelectedPitch
+        {
+            get { return selectedPitch; }
+            set
+            {
+                if (selectedPitch != value)
+                {
+                    selectedPitch = value;
+                    OnPropertyChanged(nameof(SelectedPitch));
+                }
+            }
+        }
         //public ICommand PlayMusicCommand { get; }
 
         public MainViewModel()
@@ -231,6 +245,37 @@ namespace Pieciolinia.ViewModel
                 };
 
                 Notes.Add(note);
+            }
+        }
+        public void NotesComboBoxEdit_SelectionChanged() 
+        {
+           
+            switch(Notes.ElementAt(SelectedNote).Pitch)
+            {
+                case "C":
+                    SelectedPitch = 0;
+                    break;
+                case "D":
+                    SelectedPitch = 1;
+                    break;
+                case "E":
+                    SelectedPitch = 2;
+                    break;
+                case "F":
+                    SelectedPitch = 3;
+                    break;
+                case "G":
+                    SelectedPitch = 4;
+                    break;
+                case "A":
+                    SelectedNote = 5;
+                    break;
+                case "B":
+                    SelectedPitch = 6;
+                    break;
+                default:
+                    SelectedPitch = 0;
+                    break;
             }
         }
         public void EditButton_Click()
