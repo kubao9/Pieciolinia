@@ -208,7 +208,15 @@ namespace Pieciolinia.ViewModel
             positionY -= 190;
             return positionY;
         }
+        private int CalculateEditedXPosition()
+        {
+            int baseXPosition = 10; // Początkowa pozycja X dla pierwszej nuty
+            int noteSpacing = 30; // Odległość między nutami
 
+            // rozmieszczenie nut 
+            int positionX = baseXPosition + SelectedNote * noteSpacing;
+            return positionX;
+        }
         //Mechanizm odgrywania muzyki
         public async void PlayMusic()
         {
@@ -302,7 +310,7 @@ namespace Pieciolinia.ViewModel
         {
             var note = new Note(pitch, duration, octave, isSharp, noteIcon)
             {
-                XPosition = CalculateXPosition(),
+                XPosition = CalculateEditedXPosition(),
                 YPosition = CalculateYPosition(pitch, octave)
             };
             noteIcon = GetNoteIconFromDuration(duration);
