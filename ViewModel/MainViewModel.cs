@@ -16,10 +16,21 @@ namespace Pieciolinia.ViewModel
     public class MainViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public ObservableCollection<Note> Notes { get; private set; }
+        private ObservableCollection<Note> _notes;
+        public ObservableCollection<Note> Notes
+        {
+            get { return _notes; }
+            set
+            {
+                if (_notes != value)
+                {
+                    _notes = value;
+                    OnPropertyChanged(nameof(Notes));
+                }
+            }
+        }
         public List<string> Pitches { get; private set; }
         public int SelectedNote { get; set; }
-        public int SelectedDuration,SelectedOctave,SelectedIsSharp;
         private int selectedPitch;
         public int SelectedPitch
         {
@@ -33,10 +44,50 @@ namespace Pieciolinia.ViewModel
                 }
             }
         }
+        private int selectedDuration;
+        public int SelectedDuration
+        {
+            get { return selectedDuration; }
+            set
+            {
+                if (selectedDuration != value)
+                {
+                    selectedDuration = value;
+                    OnPropertyChanged(nameof(SelectedDuration));
+                }
+            }
+        }
+        private int selectedOctave;
+        public int SelectedOctave
+        {
+            get { return selectedOctave; }
+            set
+            {
+                if (selectedOctave != value)
+                {
+                    selectedOctave = value;
+                    OnPropertyChanged(nameof(SelectedOctave));
+                }
+            }
+        }
+        private bool selectedIsSharp;
+        public bool SelectedIsSharp
+        {
+            get { return selectedIsSharp; }
+            set
+            {
+                if (selectedIsSharp != value)
+                {
+                    selectedIsSharp = value;
+                    OnPropertyChanged(nameof(SelectedIsSharp));
+                }
+            }
+        }
         //public ICommand PlayMusicCommand { get; }
 
         public MainViewModel()
         {   
+            SelectedNote = 0;
             VisEdit = Visibility.Collapsed;
             VisMain = Visibility.Visible;
             Notes = new ObservableCollection<Note>();
@@ -70,7 +121,7 @@ namespace Pieciolinia.ViewModel
             {
                 XPosition = CalculateXPosition(),
                 YPosition = CalculateYPosition(pitch, octave)
-            };
+            }; 
 
             noteIcon = GetNoteIconFromDuration(duration);
 
@@ -247,35 +298,26 @@ namespace Pieciolinia.ViewModel
                 Notes.Add(note);
             }
         }
-        public void NotesComboBoxEdit_SelectionChanged() 
+        public void SaveEditedNote(string pitch, int duration, int octave, bool isSharp, string noteIcon)
         {
-           
-            switch(Notes.ElementAt(SelectedNote).Pitch)
+            var note = new Note(pitch, duration, octave, isSharp, noteIcon)
             {
-                case "C":
-                    SelectedPitch = 0;
-                    break;
-                case "D":
-                    SelectedPitch = 1;
-                    break;
-                case "E":
-                    SelectedPitch = 2;
-                    break;
-                case "F":
-                    SelectedPitch = 3;
-                    break;
-                case "G":
-                    SelectedPitch = 4;
-                    break;
-                case "A":
-                    SelectedNote = 5;
-                    break;
-                case "B":
-                    SelectedPitch = 6;
-                    break;
-                default:
-                    SelectedPitch = 0;
-                    break;
+                XPosition = CalculateXPosition(),
+                YPosition = CalculateYPosition(pitch, octave)
+            };
+            noteIcon = GetNoteIconFromDuration(duration);
+            var TempNotes = Notes.ToList();
+            TempNotes[SelectedNote] = note;
+            Notes = new ObservableCollection<Note>(TempNotes);
+        }
+        public void NotesComboBoxEdit_SelectionChanged()
+        {
+            if (SelectedNote >= 0 && SelectedNote < Notes.Count)
+            {
+                SelectedPitch = Notes.ElementAt(SelectedNote).GetPitch();
+                SelectedDuration = Notes.ElementAt(SelectedNote).GetDurationsIndex();
+                SelectedIsSharp = Notes.ElementAt(SelectedNote).IsSharp;
+                SelectedOctave = Notes.ElementAt(SelectedNote).Octave - 1;
             }
         }
         public void EditButton_Click()

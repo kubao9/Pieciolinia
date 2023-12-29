@@ -102,5 +102,23 @@ namespace Pieciolinia
             mainViewModel?.NotesComboBoxEdit_SelectionChanged();
 
         }
+
+        private void ButtonSaveEdited_Click(object sender, RoutedEventArgs e)
+        {
+            // Pobieranie danych z interfejsu użytkownika
+            string pitch = PitchComboBoxEdit.SelectedItem.ToString();
+            //int duration = int.Parse(DurationTextBox.Text);
+            ComboBoxItem selectedDurationItem = (ComboBoxItem)DurationComboBoxEdit.SelectedItem;
+            int duration = int.Parse(selectedDurationItem.Tag.ToString());
+            //int octave = int.Parse(OctaveTextBox.Text);
+            ComboBoxItem selectedOctaveItem = (ComboBoxItem)OctaveComboBoxEdit.SelectedItem;
+            int octave = int.Parse(selectedOctaveItem.Tag.ToString());
+            bool isSharp = IsSharpCheckBoxEdit.IsChecked ?? false;
+            string noteIcon = GetNoteIconFromDuration(duration);
+            // Dostęp do MainViewModel i wywołanie funkcji AddNote
+            var mainViewModel = DataContext as MainViewModel; 
+            // Dodajemy notę przy użyciu MainViewModel
+            mainViewModel?.SaveEditedNote(pitch, duration, octave, isSharp, noteIcon); 
+        }
     }
 }
