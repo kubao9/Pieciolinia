@@ -14,7 +14,7 @@ namespace Pieciolinia.Model
         public int XPosition { get; set; }
         public int YPosition { get; set; }
 
-        public Note(string pitch, int duration, int octave, bool isSharp = false, string noteIcon = "♪")
+        public Note(string pitch = "C", int duration = 1, int octave = 1, bool isSharp = false, string noteIcon = "♪")
         {
             Pitch = pitch;
             Duration = duration;

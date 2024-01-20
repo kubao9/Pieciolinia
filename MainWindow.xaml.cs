@@ -15,6 +15,11 @@ namespace Pieciolinia
             InitializeComponent();
         }
 
+        public bool ReturnsTrue()
+        {
+            return true;
+        }
+
         private void AddNoteButton_Click(object sender, RoutedEventArgs e)
         {
             // Pobieranie danych z interfejsu użytkownika

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pieciolinia", "Pieciolinia.csproj", "{6546D94D-3622-45ED-90EF-4180DD68BCA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pieciolinia.Tests", "Pieciolinia.Tests\Pieciolinia.Tests.csproj", "{7EC64EC3-EF02-4F88-A55B-57F3AD70B237}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6546D94D-3622-45ED-90EF-4180DD68BCA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6546D94D-3622-45ED-90EF-4180DD68BCA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6546D94D-3622-45ED-90EF-4180DD68BCA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC64EC3-EF02-4F88-A55B-57F3AD70B237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC64EC3-EF02-4F88-A55B-57F3AD70B237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC64EC3-EF02-4F88-A55B-57F3AD70B237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC64EC3-EF02-4F88-A55B-57F3AD70B237}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
