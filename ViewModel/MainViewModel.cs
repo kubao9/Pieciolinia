@@ -86,7 +86,7 @@ namespace Pieciolinia.ViewModel
         //public ICommand PlayMusicCommand { get; }
 
         public MainViewModel()
-        {   
+        {
             SelectedNote = 0;
             VisEdit = Visibility.Collapsed;
             VisMain = Visibility.Visible;
@@ -121,11 +121,18 @@ namespace Pieciolinia.ViewModel
             {
                 XPosition = CalculateXPosition(),
                 YPosition = CalculateYPosition(pitch, octave)
-            }; 
+            };
 
             noteIcon = GetNoteIconFromDuration(duration);
 
-            Notes.Add(note);
+            if (Notes.Count() != 30)
+            {
+                Notes.Add(note);
+            }
+            else
+            {
+                MessageBox.Show("Przekroczono ilość nut (max 30 nut)");
+            }
 
             /*Debug.WriteLine($"Dodano nutę: {pitch}, liczba nut w kolekcji: {Notes.Count}");
             Debug.WriteLine($"{note.XPosition} : {note.YPosition}");*/

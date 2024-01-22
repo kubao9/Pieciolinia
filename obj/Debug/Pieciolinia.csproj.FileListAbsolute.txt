@@ -169,3 +169,40 @@ C:\Users\konku\Desktop\Pieciolinia\obj\Debug\Pieciolinia.csproj.CoreCompileInput
 C:\Users\konku\Desktop\Pieciolinia\obj\Debug\Pieciolinia.csproj.CopyComplete
 C:\Users\konku\Desktop\Pieciolinia\obj\Debug\Pieciolinia.exe
 C:\Users\konku\Desktop\Pieciolinia\obj\Debug\Pieciolinia.pdb
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\Pieciolinia.exe.config
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\Pieciolinia.exe
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\Pieciolinia.pdb
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\Microsoft.Win32.Registry.dll
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.Asio.dll
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.Core.dll
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.dll
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.Midi.dll
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.Wasapi.dll
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.WinForms.dll
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.WinMM.dll
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\System.Security.AccessControl.dll
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\System.Security.Principal.Windows.dll
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\Microsoft.Win32.Registry.xml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.xml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.Asio.xml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.Core.xml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.Midi.xml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.Wasapi.xml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.WinForms.xml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\NAudio.WinMM.xml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\System.Security.AccessControl.xml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\bin\Debug\System.Security.Principal.Windows.xml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\Pieciolinia.csproj.AssemblyReference.cache
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\MainWindow.g.cs
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\App.g.cs
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\Pieciolinia_MarkupCompile.cache
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\Pieciolinia_MarkupCompile.lref
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\MainWindow.baml
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\Pieciolinia.g.resources
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\Pieciolinia.Properties.Resources.resources
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\Pieciolinia.csproj.GenerateResource.cache
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\Pieciolinia.csproj.CoreCompileInputs.cache
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\Pieciolinia.csproj.CopyComplete
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\Pieciolinia.exe
+D:\Studia\semestr5\inzynieria oprogramowania\projekt2\obj\Debug\Pieciolinia.pdb

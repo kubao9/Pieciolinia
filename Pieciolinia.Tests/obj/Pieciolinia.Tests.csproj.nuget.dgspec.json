@@ -1,14 +1,14 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.Tests\\Pieciolinia.Tests.csproj": {}
+    "D:\\Studia\\semestr5\\inzynieria oprogramowania\\projekt2\\Pieciolinia.Tests\\Pieciolinia.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj": {
+    "D:\\Studia\\semestr5\\inzynieria oprogramowania\\projekt2\\Pieciolinia.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj",
+        "projectUniqueName": "D:\\Studia\\semestr5\\inzynieria oprogramowania\\projekt2\\Pieciolinia.csproj",
         "projectName": "Pieciolinia",
-        "projectPath": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj",
+        "projectPath": "D:\\Studia\\semestr5\\inzynieria oprogramowania\\projekt2\\Pieciolinia.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {}
@@ -19,20 +19,20 @@
         "net48": {}
       }
     },
-    "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.Tests\\Pieciolinia.Tests.csproj": {
+    "D:\\Studia\\semestr5\\inzynieria oprogramowania\\projekt2\\Pieciolinia.Tests\\Pieciolinia.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.Tests\\Pieciolinia.Tests.csproj",
+        "projectUniqueName": "D:\\Studia\\semestr5\\inzynieria oprogramowania\\projekt2\\Pieciolinia.Tests\\Pieciolinia.Tests.csproj",
         "projectName": "Pieciolinia.Tests",
-        "projectPath": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.Tests\\Pieciolinia.Tests.csproj",
-        "packagesPath": "C:\\Users\\Kuba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.Tests\\obj\\",
+        "projectPath": "D:\\Studia\\semestr5\\inzynieria oprogramowania\\projekt2\\Pieciolinia.Tests\\Pieciolinia.Tests.csproj",
+        "packagesPath": "C:\\Users\\Komputer\\.nuget\\packages\\",
+        "outputPath": "D:\\Studia\\semestr5\\inzynieria oprogramowania\\projekt2\\Pieciolinia.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kuba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Komputer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -47,8 +47,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj": {
-                "projectPath": "C:\\Users\\Kuba\\Pieciolinia\\Pieciolinia.csproj"
+              "D:\\Studia\\semestr5\\inzynieria oprogramowania\\projekt2\\Pieciolinia.csproj": {
+                "projectPath": "D:\\Studia\\semestr5\\inzynieria oprogramowania\\projekt2\\Pieciolinia.csproj"
               }
             }
           }
@@ -90,7 +90,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -99,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
