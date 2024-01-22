@@ -166,7 +166,7 @@ namespace Pieciolinia.ViewModel
 
         private int CalculateXPosition()
         {
-            int baseXPosition = 10; // Początkowa pozycja X dla pierwszej nuty
+            int baseXPosition = 90; // Początkowa pozycja X dla pierwszej nuty
             int noteSpacing = 30; // Odległość między nutami
 
             // rozmieszczenie nut 

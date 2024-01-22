@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:Pieciolinia.ViewModel"
         mc:Ignorable="d"
-        Title="Pieciolinia" Height="500" Width="800">
-
+        Title="Pieciolinia" Height="500" Width="1030"
+        ResizeMode="NoResize">
 
 
     <Window.DataContext>
@@ -76,11 +76,12 @@
 
         <!-- Pięciolinia -->
         <Canvas Height="150" Background="White">
-            <Line X1="0" Y1="20" X2="800" Y2="20" Stroke="Black" StrokeThickness="1" />
-            <Line X1="0" Y1="40" X2="800" Y2="40" Stroke="Black" StrokeThickness="1" />
-            <Line X1="0" Y1="60" X2="800" Y2="60" Stroke="Black" StrokeThickness="1" />
-            <Line X1="0" Y1="80" X2="800" Y2="80" Stroke="Black" StrokeThickness="1" />
-            <Line X1="0" Y1="100" X2="800" Y2="100" Stroke="Black" StrokeThickness="1" />
+            <TextBlock Text="𝄞" FontSize="150px" HorizontalAlignment="Center" Height="262" Canvas.Top="-62" VerticalAlignment="Top"/>
+            <Line X1="0" Y1="20" X2="1030" Y2="20" Stroke="Black" StrokeThickness="1" />
+            <Line X1="0" Y1="40" X2="1030" Y2="40" Stroke="Black" StrokeThickness="1" />
+            <Line X1="0" Y1="60" X2="1030" Y2="60" Stroke="Black" StrokeThickness="1" />
+            <Line X1="0" Y1="80" X2="1030" Y2="80" Stroke="Black" StrokeThickness="1" />
+            <Line X1="0" Y1="100" X2="1030" Y2="100" Stroke="Black" StrokeThickness="1" />
 
             <!-- Wyświetlanie nut -->
             <ItemsControl ItemsSource="{Binding Notes}">
