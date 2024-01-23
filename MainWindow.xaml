@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:Pieciolinia.ViewModel"
         mc:Ignorable="d"
-        Title="Pieciolinia" Height="500" Width="1030"
+        Title="Pieciolinia" Height="550" Width="1030"
         ResizeMode="NoResize">
 
 
@@ -28,6 +28,12 @@
             <Button Content="Play" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="PlayButton_Click"/>
             <Button Content="Edit" Padding="5" Margin="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="EditButton_Click" Width="83"  Visibility="{Binding VisMain}"/>
             <Button Content="Save" Padding="5" Margin="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Width="83" Visibility="{Binding VisEdit}" Click="Button_Click"/>
+            <ComboBox x:Name="FileFormatComboBox" Width="100" Margin="5">
+                <ComboBoxItem Content="WAV"/>
+                <ComboBoxItem Content="MP3"/>
+                <ComboBoxItem Content="MIDI"/>
+            </ComboBox>
+            <Button Content="Record" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="RecordButton_Click"/>
         </ToolBar>
         <!--Wybieranie nuty do edycji-->
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5" Background="#EEEEEE" Visibility="{Binding VisEdit}">

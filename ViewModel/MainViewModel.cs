@@ -9,14 +9,51 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Linq;
 using System.Windows;
+using NAudio.Wave;
 
 namespace Pieciolinia.ViewModel
 {
+    public class AudioRecorder
+    {
+        private WasapiLoopbackCapture capture;
+        private WaveFileWriter writer;
+
+        public void StartRecording(string outputPath)
+        {
+            capture = new WasapiLoopbackCapture();
+            writer = new WaveFileWriter(outputPath, capture.WaveFormat);
+
+            capture.DataAvailable += (s, a) =>
+            {
+                writer.Write(a.Buffer, 0, a.BytesRecorded);
+            };
+
+            capture.RecordingStopped += (s, a) =>
+            {
+                writer.Dispose();
+                writer = null;
+                capture.Dispose();
+            };
+
+            capture.StartRecording();
+        }
+
+        public void StopRecording()
+        {
+            capture.StopRecording();
+        }
+    }
 
     public class MainViewModel : INotifyPropertyChanged
     {
+        public bool isPlaying { get; set; } = false;
         public event PropertyChangedEventHandler PropertyChanged;
         private ObservableCollection<Note> _notes;
+
+        //Recording music 
+        private AudioRecorder recorder;
+        private string recordFilePath;
+        public bool isRecording { get; set; } = false;
         public ObservableCollection<Note> Notes
         {
             get { return _notes; }
@@ -94,6 +131,7 @@ namespace Pieciolinia.ViewModel
             Pitches = new List<string> { "C", "D", "E", "F", "G", "A", "B" };
 
             //PlayMusicCommand = new RelayCommand(PlayMusic);
+            recorder = new AudioRecorder();
         }
         private Visibility visMain;
         public Visibility VisMain
@@ -217,18 +255,30 @@ namespace Pieciolinia.ViewModel
         }
         private int CalculateEditedXPosition()
         {
-            int baseXPosition = 10; // Początkowa pozycja X dla pierwszej nuty
+            int baseXPosition = 90; // Początkowa pozycja X dla pierwszej nuty /10
             int noteSpacing = 30; // Odległość między nutami
 
             // rozmieszczenie nut 
             int positionX = baseXPosition + SelectedNote * noteSpacing;
             return positionX;
         }
+
         //Mechanizm odgrywania muzyki
         public async void PlayMusic()
         {
+            if (isPlaying)
+            {
+                return;
+            }
+
+            //var recorder = new AudioRecorder();
+            if (isRecording)
+            {
+                recorder.StartRecording(recordFilePath);
+            }
             foreach (var note in Notes)
             {
+                isPlaying = true;
                 string fileName = GetFileNameForNote(note);
                 string filePath = Path.Combine("NotesAudio", fileName);
 
@@ -260,7 +310,15 @@ namespace Pieciolinia.ViewModel
                     // Obsługa błędu, plik nie istnieje
                     Console.WriteLine($"File not found: {filePath}");
                 }
+
             }
+            if (isRecording)
+            {
+                recorder.StopRecording();
+                isRecording = false;
+            }
+
+            isPlaying = false;
         }
 
         private int ConvertDurationToMilliseconds(int duration)
@@ -349,6 +407,12 @@ namespace Pieciolinia.ViewModel
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void PrepareRecording(string filePath, string format)
+        {
+            recordFilePath = filePath;
+            isRecording = true;
         }
 
     }

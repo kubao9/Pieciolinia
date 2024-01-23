@@ -102,7 +102,8 @@ namespace Pieciolinia
             var mainViewModel = DataContext as MainViewModel;
             mainViewModel?.SaveButton_Click();
         }
-        private void NotesComboBoxEdit_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+        private void NotesComboBoxEdit_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
             var mainViewModel = DataContext as MainViewModel;
             mainViewModel?.NotesComboBoxEdit_SelectionChanged();
 
@@ -121,9 +122,39 @@ namespace Pieciolinia
             bool isSharp = IsSharpCheckBoxEdit.IsChecked ?? false;
             string noteIcon = GetNoteIconFromDuration(duration);
             // Dostęp do MainViewModel i wywołanie funkcji AddNote
-            var mainViewModel = DataContext as MainViewModel; 
+            var mainViewModel = DataContext as MainViewModel;
             // Dodajemy notę przy użyciu MainViewModel
-            mainViewModel?.SaveEditedNote(pitch, duration, octave, isSharp, noteIcon); 
+            mainViewModel?.SaveEditedNote(pitch, duration, octave, isSharp, noteIcon);
         }
+
+        private void RecordButton_Click(object sender, RoutedEventArgs e)
+        {
+            string selectedFormat = (FileFormatComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            string filter;
+            switch (selectedFormat)
+            {
+                case "MP3":
+                    filter = "MP3 files (*.mp3)|*.mp3";
+                    break;
+                case "MIDI":
+                    filter = "MIDI files (*.midi)|*.midi";
+                    break;
+                default:
+                    filter = "WAV files (*.wav)|*.wav";
+                    break;
+            }
+
+            var saveFileDialog = new SaveFileDialog
+            {
+                Filter = filter,
+                Title = "Save record file"
+            };
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                var mainViewModel = DataContext as MainViewModel;
+                mainViewModel?.PrepareRecording(saveFileDialog.FileName, selectedFormat);
+            }
+        }
+
     }
 }
