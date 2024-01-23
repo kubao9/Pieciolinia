@@ -362,7 +362,9 @@ namespace Pieciolinia.ViewModel
                     YPosition = int.Parse(parts[5]),
                 };*/
 
-                var note = new Note(parts[0], int.Parse(parts[1]), int.Parse(parts[2]), bool.Parse(parts[3]))
+                var noteIcon = GetNoteIconFromDuration(int.Parse(parts[1]));
+
+                var note = new Note(parts[0], int.Parse(parts[1]), int.Parse(parts[2]), bool.Parse(parts[3]), noteIcon)
                 {
                     XPosition = CalculateXPosition(),
                     YPosition = CalculateYPosition(parts[0], int.Parse(parts[2]))
