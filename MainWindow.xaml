@@ -24,7 +24,7 @@
 
         <!-- Pasek narzędzi -->
         <ToolBar ToolBarTray.IsLocked="True" DockPanel.Dock="Top" Background="#bccefb ">
-            <Button Content="Add Note" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White"/>
+            <!--<Button Content="Add Note" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White"/>-->
             <Button Content="Play" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="PlayButton_Click"/>
             <Button Content="Edit" Padding="5" Margin="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="EditButton_Click" Width="83"  Visibility="{Binding VisMain}"/>
             <Button Content="Save" Padding="5" Margin="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Width="83" Visibility="{Binding VisEdit}" Click="Button_Click"/>
@@ -39,6 +39,7 @@
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5" Background="#EEEEEE" Visibility="{Binding VisEdit}">
             <TextBlock Text="Choose note:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <ComboBox x:Name="NotesComboBoxEdit" SelectionChanged="NotesComboBoxEdit_SelectionChanged" Width="70" Margin="5" SelectedIndex="{Binding SelectedNote}" ItemsSource="{Binding Notes}"/>
+            <Button Content="Clear Notes" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="ClearNotesButton_Click"/>
         </StackPanel>
         <!-- Formularz do dodawania nut -->
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5" Background="#EEEEEE" Visibility="{Binding VisMain}">

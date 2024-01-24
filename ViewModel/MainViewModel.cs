@@ -163,6 +163,11 @@ namespace Pieciolinia.ViewModel
 
             noteIcon = GetNoteIconFromDuration(duration);
 
+            /*if (note.IsSharp)
+            {
+                note.NoteIcon = "♯" + noteIcon;
+            }*/
+
             if (Notes.Count() != 30)
             {
                 Notes.Add(note);
@@ -382,7 +387,16 @@ namespace Pieciolinia.ViewModel
             };
             noteIcon = GetNoteIconFromDuration(duration);
             var TempNotes = Notes.ToList();
-            TempNotes[SelectedNote] = note;
+
+            try
+            {
+                TempNotes[SelectedNote] = note;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
             Notes = new ObservableCollection<Note>(TempNotes);
         }
         public void NotesComboBoxEdit_SelectionChanged()
@@ -415,6 +429,15 @@ namespace Pieciolinia.ViewModel
         {
             recordFilePath = filePath;
             isRecording = true;
+        }
+
+        public void ClearNotes()
+        {
+            if (isRecording == false && isPlaying == false)
+            {
+                Notes.Clear();
+            }
+
         }
 
     }

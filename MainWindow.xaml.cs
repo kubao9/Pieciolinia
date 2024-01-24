@@ -156,5 +156,11 @@ namespace Pieciolinia
             }
         }
 
+        private void ClearNotesButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainViewModel = DataContext as MainViewModel;
+            mainViewModel?.ClearNotes();
+        }
+
     }
 }
