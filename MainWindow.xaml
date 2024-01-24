@@ -41,7 +41,7 @@
         <!--Wybieranie nuty do edycji-->
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0" Background="#617A9E" Visibility="{Binding VisEdit}">
             <TextBlock Text="Choose note:" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="15px" FontWeight="Bold" Padding="5,0,0,0"/>
-            <ComboBox x:Name="NotesComboBoxEdit" SelectionChanged="NotesComboBoxEdit_SelectionChanged" Width="70" Margin="5" Background="White" Foreground="#617A9E" FontSize="15px" FontWeight="Bold" SelectedIndex="{Binding SelectedNote}" ItemsSource="{Binding Notes}">
+            <ComboBox x:Name="NotesComboBoxEdit" SelectionChanged="NotesComboBoxEdit_SelectionChanged" Width="70" Margin="5" Background="White" Foreground="#617A9E" FontSize="15px" FontWeight="Bold" SelectedIndex="{Binding SelectedNote}" DisplayMemberPath="Pitch" ItemsSource="{Binding Notes}">
                 <ComboBox.Resources>
                     <Style TargetType="ComboBoxItem">
                         <Setter Property="Foreground" Value="White"/>
@@ -51,7 +51,7 @@
                     </Style>
                 </ComboBox.Resources>
             </ComboBox>
-
+            
             <Button Content="Delete Note" Margin="5" Padding="5" BorderBrush="#71609F" Foreground="White" FontSize="15px" FontWeight="Bold" BorderThickness="3" Background="#617A9E" Click="DeleteNoteButton_Click"/>
             <Button Content="Clear Notes" Margin="5" Padding="5" BorderBrush="#71609F" Foreground="White" FontSize="15px" FontWeight="Bold" BorderThickness="3" Background="#617A9E" Click="ClearNotesButton_Click"/>
         </StackPanel>

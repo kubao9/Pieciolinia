@@ -267,7 +267,15 @@ namespace Pieciolinia.ViewModel
             int positionX = baseXPosition + SelectedNote * noteSpacing;
             return positionX;
         }
+        private int CalculateEditedXPosition(int x)
+        {
+            int baseXPosition = 90; // Początkowa pozycja X dla pierwszej nuty /10
+            int noteSpacing = 30; // Odległość między nutami
 
+            // rozmieszczenie nut 
+            int positionX = baseXPosition + x * noteSpacing;
+            return positionX;
+        }
         //Mechanizm odgrywania muzyki
         public async void PlayMusic()
         {
@@ -439,11 +447,19 @@ namespace Pieciolinia.ViewModel
             }
 
         }
-        public void DeleteNote() {
-            if (SelectedNote >= 0 && SelectedNote < Notes.Count) {
+        public void DeleteNote()
+        {
+            if (SelectedNote >= 0 && SelectedNote < Notes.Count)
+            {
                 var TempNotes = Notes.ToList();
                 TempNotes.RemoveAt(SelectedNote);
+                for (int i = 0; i < TempNotes.Count(); i++)
+                {
+                    var TempNote = TempNotes[i];
+                    TempNote.XPosition = CalculateEditedXPosition(i);
+                }
                 Notes = new ObservableCollection<Note>(TempNotes);
+
                 SelectedNote = -1;
             }
 
