@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:Pieciolinia.ViewModel"
         mc:Ignorable="d"
-        Title="Pieciolinia" Height="550" Width="1030"
+        Title="Pieciolinia" Height="600" Width="1030"
+        Background="#606E9F"
         ResizeMode="NoResize">
 
 
@@ -13,57 +14,80 @@
         <vm:MainViewModel />
     </Window.DataContext>
 
+
+
     <DockPanel>
         <!-- Menu główne -->
-        <Menu DockPanel.Dock="Top" Background="#bccefb " Foreground="Black">
+        <Menu DockPanel.Dock="Top" Background="#617A9E" Foreground="White" FontSize="15px" FontWeight="Bold">
             <MenuItem Header="File">
-                <MenuItem x:Name="Open1" Header="Open" Click="Open1_Click"/>
-                <MenuItem x:Name="Save1" Header="Save" Click="Save1_Click"/>
+                <MenuItem Background="#617A9E" Foreground="White" x:Name="Open1" Header="Open" Click="Open1_Click"/>
+                <MenuItem Background="#617A9E" Foreground="White" x:Name="Save1" Header="Save" Click="Save1_Click"/>
             </MenuItem>
         </Menu>
 
         <!-- Pasek narzędzi -->
-        <ToolBar ToolBarTray.IsLocked="True" DockPanel.Dock="Top" Background="#bccefb ">
+        <ToolBar HorizontalAlignment="Stretch" Margin="0" Padding="0" ToolBarTray.IsLocked="True" DockPanel.Dock="Top" Background="#617A9E">
             <!--<Button Content="Add Note" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White"/>-->
-            <Button Content="Play" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="PlayButton_Click"/>
-            <Button Content="Edit" Padding="5" Margin="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="EditButton_Click" Width="83"  Visibility="{Binding VisMain}"/>
-            <Button Content="Save" Padding="5" Margin="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Width="83" Visibility="{Binding VisEdit}" Click="Button_Click"/>
-            <ComboBox x:Name="FileFormatComboBox" Width="100" Margin="5">
-                <ComboBoxItem Content="WAV"/>
-                <ComboBoxItem Content="MP3"/>
-                <ComboBoxItem Content="MIDI"/>
+            <Button Content="Play" Margin="5" Padding="5" BorderBrush="#71609F" Foreground="White" FontSize="15px" FontWeight="Bold" BorderThickness="3" Background="#617A9E" Click="PlayButton_Click"/>
+            <Button Content="Edit" Padding="5" Margin="5" BorderBrush="#71609F" Foreground="White" FontSize="15px" FontWeight="Bold" BorderThickness="3" Background="#617A9E" Click="EditButton_Click" Width="83"  Visibility="{Binding VisMain}"/>
+            <Button Content="Save" Padding="5" Margin="5" BorderBrush="#71609F" Foreground="White" FontSize="15px" FontWeight="Bold" BorderThickness="3" Background="#617A9E" Width="83" Visibility="{Binding VisEdit}" Click="Button_Click"/>
+            <ComboBox x:Name="FileFormatComboBox" Width="100" Margin="5"  Background="#617A9E" Foreground="White" FontSize="15px" FontWeight="Bold">
+                <ComboBoxItem Content="WAV" Background="#617A9E" Foreground="White"/>
+                <ComboBoxItem Content="MP3" Background="#617A9E" Foreground="White"/>
+                <ComboBoxItem Content="MIDI" Background="#617A9E" Foreground="White"/>
             </ComboBox>
-            <Button Content="Record" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="RecordButton_Click"/>
+            <Button Content="Record" Margin="5" Padding="5" BorderBrush="#E1341E" Foreground="White" FontSize="15px" FontWeight="Bold" BorderThickness="3" Background="#617A9E" Click="RecordButton_Click"/>
         </ToolBar>
         <!--Wybieranie nuty do edycji-->
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5" Background="#EEEEEE" Visibility="{Binding VisEdit}">
-            <TextBlock Text="Choose note:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <ComboBox x:Name="NotesComboBoxEdit" SelectionChanged="NotesComboBoxEdit_SelectionChanged" Width="70" Margin="5" SelectedIndex="{Binding SelectedNote}" ItemsSource="{Binding Notes}"/>
-            <Button Content="Delete Note" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="DeleteNoteButton_Click"/>
-            <Button Content="Clear Notes" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="ClearNotesButton_Click"/>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0" Background="#617A9E" Visibility="{Binding VisEdit}">
+            <TextBlock Text="Choose note:" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="15px" FontWeight="Bold" Padding="5,0,0,0"/>
+            <ComboBox x:Name="NotesComboBoxEdit" SelectionChanged="NotesComboBoxEdit_SelectionChanged" Width="70" Margin="5" Background="White" Foreground="#617A9E" FontSize="15px" FontWeight="Bold" SelectedIndex="{Binding SelectedNote}" ItemsSource="{Binding Notes}">
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBoxItem">
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Background" Value="#617A9E"/>
+
+
+                    </Style>
+                </ComboBox.Resources>
+            </ComboBox>
+
+            <Button Content="Delete Note" Margin="5" Padding="5" BorderBrush="#71609F" Foreground="White" FontSize="15px" FontWeight="Bold" BorderThickness="3" Background="#617A9E" Click="DeleteNoteButton_Click"/>
+            <Button Content="Clear Notes" Margin="5" Padding="5" BorderBrush="#71609F" Foreground="White" FontSize="15px" FontWeight="Bold" BorderThickness="3" Background="#617A9E" Click="ClearNotesButton_Click"/>
         </StackPanel>
         <!-- Formularz do dodawania nut -->
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5" Background="#EEEEEE" Visibility="{Binding VisMain}">
-            <ComboBox x:Name="PitchComboBox" Width="70" Margin="5"
-                      ItemsSource="{Binding Pitches}" SelectedIndex="0"/>
-            <ComboBox x:Name="DurationComboBox" Width="70" Margin="5"
-                      SelectedIndex="0">
-                <ComboBoxItem Content="Cała" Tag="1"/>
-                <ComboBoxItem Content="Pół" Tag="2"/>
-                <ComboBoxItem Content="Ćwierć" Tag="4"/>
-                <ComboBoxItem Content="Ósemka" Tag="8"/>
-                <ComboBoxItem Content="Szesnastka" Tag="16"/>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0"  Background="#617A9E" Visibility="{Binding VisMain}">
+            <TextBlock Text="Add Note: " HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="15px" FontWeight="Bold" Padding="5,0,0,0"/>
+            <ComboBox x:Name="PitchComboBox" Width="40" Margin="5"
+                      ItemsSource="{Binding Pitches}" SelectedIndex="0" Background="White" Foreground="#617A9E" FontSize="15px" FontWeight="Bold">
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBoxItem">
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Background" Value="#617A9E"/>
+
+
+                    </Style>
+                </ComboBox.Resources>
             </ComboBox>
-            <ComboBox x:Name="OctaveComboBox" Width="70" Margin="5" SelectedIndex="0">
-                <ComboBoxItem Content="1" Tag="1"/>
-                <ComboBoxItem Content="2" Tag="2"/>
-                <ComboBoxItem Content="3" Tag="3"/>
+            <ComboBox x:Name="DurationComboBox" Width="110" Margin="5"
+                      SelectedIndex="0" Background="White" Foreground="#617A9E" FontSize="15px" FontWeight="Bold">
+                <ComboBoxItem Content="Cała" Tag="1" Background="#617A9E" Foreground="White"/>
+                <ComboBoxItem Content="Pół" Tag="2" Background="#617A9E" Foreground="White"/>
+                <ComboBoxItem Content="Ćwierć" Tag="4" Background="#617A9E" Foreground="White"/>
+                <ComboBoxItem Content="Ósemka" Tag="8" Background="#617A9E" Foreground="White"/>
+                <ComboBoxItem Content="Szesnastka" Tag="16" Background="#617A9E" Foreground="White"/>
             </ComboBox>
-            <CheckBox x:Name="IsSharpCheckBox" Content="Sharp" Margin="5" />
-            <Button Content="Add Note" Margin="5" Click="AddNoteButton_Click"/>
+            <ComboBox x:Name="OctaveComboBox" Width="70" Margin="5" SelectedIndex="0" Background="White" Foreground="#617A9E" FontSize="15px" FontWeight="Bold">
+                <ComboBoxItem Content="1" Tag="1"  Background="#617A9E" Foreground="White"/>
+                <ComboBoxItem Content="2" Tag="2"  Background="#617A9E" Foreground="White"/>
+                <ComboBoxItem Content="3" Tag="3"  Background="#617A9E" Foreground="White"/>
+            </ComboBox>
+            <CheckBox x:Name="IsSharpCheckBox" Content="Sharp" Margin="5" BorderBrush="#71609F" Foreground="White" FontSize="15px" FontWeight="Bold" BorderThickness="3" Background="#617A9E" Height="20"/>
+            <Button Content="Add Note" Margin="5" Padding="3" Click="AddNoteButton_Click" BorderBrush="#5DA659" Foreground="White" FontSize="15px" FontWeight="Bold" BorderThickness="3" Background="#617A9E"/>
         </StackPanel>
         <!--Formularz do edycji nut-->
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5" Background="#EEEEEE" Visibility="{Binding VisEdit}">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0" Background="#617A9E" Visibility="{Binding VisEdit}">
+            <TextBlock Text="Add Note: " HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="15px" FontWeight="Bold" Padding="5,0,0,0"/>
             <ComboBox x:Name="PitchComboBoxEdit" Width="70" Margin="5"
                       ItemsSource="{Binding Pitches}" SelectedIndex="{Binding SelectedPitch}"/>
             <ComboBox x:Name="DurationComboBoxEdit" Width="70" Margin="5" SelectedIndex="{Binding SelectedDuration}">
@@ -83,7 +107,7 @@
         </StackPanel>
 
         <!-- Pięciolinia -->
-        <Canvas Height="150" Background="White">
+        <Canvas Height="150" Background="#606E9F">
             <TextBlock Text="𝄞" FontSize="150px" HorizontalAlignment="Center" Height="262" Canvas.Top="-62" VerticalAlignment="Top"/>
             <Line X1="0" Y1="20" X2="1030" Y2="20" Stroke="Black" StrokeThickness="1" />
             <Line X1="0" Y1="40" X2="1030" Y2="40" Stroke="Black" StrokeThickness="1" />
