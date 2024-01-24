@@ -39,6 +39,7 @@
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5" Background="#EEEEEE" Visibility="{Binding VisEdit}">
             <TextBlock Text="Choose note:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <ComboBox x:Name="NotesComboBoxEdit" SelectionChanged="NotesComboBoxEdit_SelectionChanged" Width="70" Margin="5" SelectedIndex="{Binding SelectedNote}" ItemsSource="{Binding Notes}"/>
+            <Button Content="Delete Note" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="DeleteNoteButton_Click"/>
             <Button Content="Clear Notes" Margin="5" Padding="5" BorderBrush="LightCyan" BorderThickness="3" Background="White" Click="ClearNotesButton_Click"/>
         </StackPanel>
         <!-- Formularz do dodawania nut -->

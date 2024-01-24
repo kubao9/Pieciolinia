@@ -162,5 +162,10 @@ namespace Pieciolinia
             mainViewModel?.ClearNotes();
         }
 
+        private void DeleteNoteButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainViewModel = DataContext as MainViewModel;
+            mainViewModel?.DeleteNote();
+        }
     }
 }

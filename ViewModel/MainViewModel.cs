@@ -439,6 +439,16 @@ namespace Pieciolinia.ViewModel
             }
 
         }
+        public void DeleteNote() {
+            if (SelectedNote >= 0 && SelectedNote < Notes.Count) {
+                var TempNotes = Notes.ToList();
+                TempNotes.RemoveAt(SelectedNote);
+                Notes = new ObservableCollection<Note>(TempNotes);
+                SelectedNote = -1;
+            }
+
+
+        }
 
     }
 }
