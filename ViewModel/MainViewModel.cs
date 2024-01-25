@@ -41,6 +41,7 @@ namespace Pieciolinia.ViewModel
         public void StopRecording()
         {
             capture.StopRecording();
+            MessageBox.Show("Zapisano nagranie.");
         }
     }
 

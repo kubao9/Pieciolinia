@@ -243,3 +243,41 @@ D:\Studia\semestr5\inzynieria oprogramowania\projekt3\obj\Debug\Pieciolinia.cspr
 D:\Studia\semestr5\inzynieria oprogramowania\projekt3\obj\Debug\Pieciolinia.csproj.CopyComplete
 D:\Studia\semestr5\inzynieria oprogramowania\projekt3\obj\Debug\Pieciolinia.exe
 D:\Studia\semestr5\inzynieria oprogramowania\projekt3\obj\Debug\Pieciolinia.pdb
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\Pieciolinia.exe.config
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\Pieciolinia.exe
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\Pieciolinia.pdb
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.Asio.dll
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.Core.dll
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.dll
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.Midi.dll
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.Wasapi.dll
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.WinForms.dll
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.WinMM.dll
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.xml
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.Asio.xml
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.Core.xml
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.Midi.xml
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.Wasapi.xml
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.WinForms.xml
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\NAudio.WinMM.xml
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Kuba\Source\Repos\Pieciolinia\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia.csproj.AssemblyReference.cache
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\MainWindow.g.cs
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\App.g.cs
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia_MarkupCompile.cache
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia_MarkupCompile.lref
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\MainWindow.baml
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia.g.resources
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia.Properties.Resources.resources
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia.csproj.GenerateResource.cache
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia.csproj.CoreCompileInputs.cache
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia.csproj.CopyComplete
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia.exe
+C:\Users\Kuba\Source\Repos\Pieciolinia\obj\Debug\Pieciolinia.pdb
